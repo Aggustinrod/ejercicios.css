@@ -39,7 +39,7 @@ main {
 }
 
 /* ============================================================
-   TODO 1 — El hero con imagen de fondo
+   TODO 1 ✅— El hero con imagen de fondo
    A .hero dale:
    - height: 320px
    - background-color: #23423d       color de respaldo
@@ -50,18 +50,30 @@ main {
    Si la imagen tarda en cargar, ¿para qué sirve el
    background-color de respaldo?
    ============================================================ */
-
+.hero
+{
+  height: 320px;
+  background-color: #23423d;
+  background-image: url("https://media.istockphoto.com/id/1249784759/es/foto/nacional-aconcagua-parque-mendoza-argentina.jpg?s=612x612&w=0&k=20&c=--oLYRs8AT58SFI1SAz8hNkud22n6IJEnwxoLAPWOas=");
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat ;
+}
 /* ============================================================
-   TODO 2 — Texto del hero
+   TODO 2 ✅— Texto del hero
    A .hero dale también:
    - color: #ffffff
    - text-align: center
    ¿El texto se lee bien sobre la imagen? Probá cambiar el
    background-size a contain y mirá la diferencia con cover.
    ============================================================ */
-
+.hero
+{
+ color:#ffffff;
+ text-align: center;
+}
 /* ============================================================
-   TODO 3 — Frase con gradiente
+   TODO 3✅ — Frase con gradiente
    A .frase dale:
    - background: linear-gradient(90deg, #0d3b66, #1d7a8c)
    - color: #ffffff
@@ -70,10 +82,21 @@ main {
    Un gradiente es una "imagen" que genera CSS: por eso va en
    background-image (o en el shorthand background).
    ============================================================ */
-
+.frase
+{
+  background-color: linear-gradient(90deg, #0d3b66, #1d7a8c);
+  color: #ffffff;
+  padding: 24px;
+  text-align: center;
+  font-style: italic;
+}
 /* ============================================================
-   TODO 4 — Experimento con attachment
+   TODO 4 ✅— Experimento con attachment
    Sumale a .hero:
    - background-attachment: fixed
    Scrolleá la página: ¿qué le pasa a la imagen del hero?
    ============================================================ */
+.hero
+{
+  background-attachment: fixed;
+}
