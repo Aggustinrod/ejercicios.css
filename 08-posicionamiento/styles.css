@@ -72,7 +72,7 @@ body {
 }
 
 /* ============================================================
-   TODO 1 — Barra fija
+   TODO 1 ✅— Barra fija
    A .barra sumale:
    - position: fixed
    - top: 0
@@ -80,18 +80,29 @@ body {
    - width: 100%
    Mirá la página: la barra queda fija, pero ¿qué pasa con el
    contenido que quedó escondido detrás de ella?
+   Sale del flujo de elementos.
    ============================================================ */
-
+.barra
+{
+  /*position: sticky*/ /*static (defecto)*/
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 /* ============================================================
-   TODO 2 — Compensar la barra
+   TODO 2 ✅— Compensar la barra
    Al body sumale:
    - padding-top: 64px
    Un elemento fixed sale del flujo normal: hay que hacerle
    lugar a mano.
    ============================================================ */
-
+body
+{
+  padding-top: 64px;
+}
 /* ============================================================
-   TODO 3 — El índice pegajoso
+   TODO 3✅ — El índice pegajoso
    A .indice dale:
    - position: sticky
    - top: 64px
@@ -100,17 +111,27 @@ body {
    Scrolleá: se comporta como relative hasta que toca el tope,
    y ahí se queda pegado (debajo de la barra).
    ============================================================ */
-
+.indice
+{
+  position:sticky;
+  top: 64px;
+  background-color: #ffd166;
+  padding: 8px 24px;
+  
+}
 /* ============================================================
-   TODO 4 — Ancla para la etiqueta
+   TODO 4✅ — Ancla para la etiqueta
    A .producto sumale:
    - position: relative
    No se mueve de lugar: sirve de REFERENCIA para el hijo con
    position: absolute del TODO 5.
    ============================================================ */
-
+.producto
+{
+  position: relative;
+}
 /* ============================================================
-   TODO 5 — Etiqueta de oferta flotante
+   TODO 5 ✅— Etiqueta de oferta flotante
    A .etiqueta-oferta dale:
    - position: absolute
    - top: 8px
@@ -122,10 +143,21 @@ body {
    Queda DENTRO del producto pero SIN ocupar lugar en el flujo.
    Probá: si le sacás el position: relative a .producto
    (TODO 4), ¿respecto de quién se posiciona la etiqueta?
+   Se va a posicionar sobre el body, porque busca el primer position
+   diferente al static.
    ============================================================ */
-
+.etiqueta-oferta
+{
+position: absolute;
+top: 8px;
+right: 8px;
+background-color: #e63946;
+color:#ffffff;
+padding:4px 8px;
+border-radius: 4px;
+}
 /* ============================================================
-   TODO 6 — Botón volver arriba
+   TODO 6✅ — Botón volver arriba
    A .subir dale:
    - position: fixed
    - bottom: 16px
@@ -138,3 +170,15 @@ body {
    Scrolleá y fijate qué pasa si dos elementos posicionados se
    superponen: ¿quién queda arriba? ¿Qué controla el z-index?
    ============================================================ */
+.subir
+{
+  position: fixed;
+  bottom:16px;
+  rigth: 16px;
+  background-color: #1d1d2b;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 24px;
+  z-index:10;
+  text-decoration: none;
+}
