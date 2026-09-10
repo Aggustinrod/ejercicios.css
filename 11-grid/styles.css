@@ -56,8 +56,16 @@ body {
    - padding: 0 24px 24px
    fr es una fracción del espacio disponible. ¿Qué pasa si
    escribís repeat(6, 1fr)?
+   la diferencia es que los recuadros se hacen mas pequeños,
+   por lo tanto se alinean en una fila.
    ============================================================ */
-
+.galeria
+{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+  padding: 0 24 px 24px;
+}
 /* ============================================================
    TODO 2 — Las tarjetas de las obras
    A .obra dale:
@@ -66,7 +74,14 @@ body {
    - border-radius: 8px
    - padding: 16px
    ============================================================ */
+.obra
+{
+  background-color: #ffffff;
+  border:1px solid #e0d9cc;
+  border-radius: 8px;
+  padding: 16px;
 
+}
 /* ============================================================
    TODO 3 — La obra destacada
    A .destacada dale:

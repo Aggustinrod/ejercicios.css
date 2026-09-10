@@ -38,12 +38,15 @@ body {
 .emoji {
   height: 70px;
   border-radius: 6px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.tarjeta:nth-child(1) .emoji { background: linear-gradient(135deg, #b45309, #78350f); }
-.tarjeta:nth-child(2) .emoji { background: linear-gradient(135deg, #fbbf24, #d97706); }
-.tarjeta:nth-child(3) .emoji { background: linear-gradient(135deg, #f9a8d4, #db2777); }
-.tarjeta:nth-child(4) .emoji { background: linear-gradient(135deg, #60a5fa, #2563eb); }
+.tarjeta:nth-child(1) .emoji { background-image: url("https://www.foodandwine.com/thmb/xQZv2CX6FO5331PYK7uGPF1we9Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Partners-Flat-White-FT-BLOG0523-b11f6273c2d84462954c2163d6a1076d.jpg")  }
+.tarjeta:nth-child(2) .emoji { background-image: url("https://media.airedesantafe.com.ar/p/a8c3ffb26a1c2c9a055af656006f0199/adjuntos/268/imagenes/003/717/0003717993/1200x0/smart/como-hacer-medialunas-caseras-paso-paso.png")}
+.tarjeta:nth-child(3) .emoji { background-image: url("https://mujermexico.com/wp-content/uploads/2023/07/cheesecake-origen.jpg")}
+.tarjeta:nth-child(4) .emoji { background-image: url("https://tse4.mm.bing.net/th/id/OIP.m3Bx_p8kmLU7OtMQkiQNBQHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3")}
 
 .tarjeta {
   background-color: #ffffff;
@@ -51,6 +54,8 @@ body {
   border-radius: 8px;
   padding: 16px;
   text-align: center;
+ 
+  
 }
 
 .tarjeta h3 {
@@ -67,7 +72,7 @@ body {
 }
 
 /* ============================================================
-   TODO 1 — Estilos base (escritorio)
+   TODO 1✅ — Estilos base (escritorio)
    A .barra dale:
    - display: flex
    - justify-content: space-between
@@ -82,27 +87,79 @@ body {
    - gap: 16px
    - padding: 24px
    ============================================================ */
+.barra
+{
+  display: flex;
+  justify-content:  space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #3e2b23;
+  color: #ffffff;
+}
+.links
+{
+  display: flex;
+  gap: 16px;
+}
+.links a
+{
+  color: #ffffff;
+}
 
+.tarjetas
+{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding:24px;
+}
 /* ============================================================
-   TODO 2 — Tableta (hasta 900px)
+   TODO 2✅ — Tableta (hasta 900px)
    Con una media query, cuando la pantalla mida MÁXIMO 900px:
    @media (max-width: 900px) { ... }
    - .tarjetas  grid-template-columns: repeat(2, 1fr)
    - .hero h1  font-size: 28px
    Abrí el navegador y achicá la ventana para verlo funcionar.
    ============================================================ */
-
+@media (max-width:900px)
+{
+  .tarjetas
+  {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero h1
+  {
+    font-size: 28px;
+  }
+}
 /* ============================================================
-   TODO 3 — Celular (hasta 600px)
+   TODO 3✅ — Celular (hasta 600px)
    Otra media query, ahora con max-width: 600px:
    - .tarjetas  grid-template-columns: 1fr
    - .barra  flex-direction: column y gap: 8px
    - .nota  text-align: center
    ============================================================ */
+@media (max-width:600px)
+{
+  .tarjetas
+  {
+    grid-template-columns: 1fr;
 
+  }
+  .barra
+  {
+    flex-direction: column;
+    gap:8px;
+  }
+  .nota
+  {
+    text-align:center;
+  }
+}
 /* ============================================================
     PARA PENSAR
    ¿Por qué la media query de 600px tiene que ir DESPUÉS de la
    de 900px en el archivo? (Pista: cuando las dos condiciones
    se cumplen a la vez, ¿qué gana según la cascada?)
+   Por la regla de cascada el segundo pisa al primero.
    ============================================================ */
