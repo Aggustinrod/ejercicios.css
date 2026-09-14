@@ -45,20 +45,27 @@ body {
   padding: 16px 24px;
   background-color: #0f3d3e;
   color: #ffffff;
+  display: flex;
 }
 
 .logo {
   font-weight: bold;
   font-size: 1.25rem;
+  
 }
 
 .links {
   gap: 16px;
+  display: flex;
+  
+ 
 }
 
 .links a {
   color: #9ad1c9;
   text-decoration: none;
+  right: 100%;
+  
 }
 
 .titulo {
@@ -70,10 +77,15 @@ body {
   justify-content: center;
   gap: 16px;
   padding: 16px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  
+  
 }
 
 .clase {
   display: flex;
+  flex-direction: column;
   align-items: center;
   flex: 1 1 200px;
   background-color: #ffffff;
@@ -81,7 +93,9 @@ body {
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-}
+
+
+  }
 
 /* Colores de los íconos: ya están bien, no los toques. */
 .icono {
@@ -105,6 +119,7 @@ body {
 }
 
 .pie {
+  
   display: flex;
   justify-content: space-around;
   padding: 16px 24px;
