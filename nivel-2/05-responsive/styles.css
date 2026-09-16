@@ -38,7 +38,7 @@ body {
 }
 
 .barra {
-  display: flex;
+  display:flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
@@ -74,7 +74,7 @@ body {
 }
 
 .contenedor {
-  width: 900px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -93,7 +93,7 @@ body {
 }
 
 .gusto {
-  flex: 0 0 220px;
+  flex: 1 1 220px;
   background-color: #ffffff;
   border: 1px solid #f0dccb;
   border-radius: 10px;
@@ -120,7 +120,7 @@ body {
   color: #8a6f5c;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 900px) {
   .hero h1 {
     font-size: 2rem;
   }
@@ -130,7 +130,7 @@ body {
   }
 }
 
-@media (max-height: 600px) {
+@media (max-width: 600px) {
   .barra {
     flex-direction: column;
     gap: 8px;
