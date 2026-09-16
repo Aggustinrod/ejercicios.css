@@ -32,8 +32,10 @@
   --color-primario: #2f6b3a;
   --color-fondo: #f4f7f2;
   --color-texto: #22301f;
-  --color-texto-suave: #6f7d6a;
-  --espacio: 16;
+  --color-texto-suave:#6f7d6a;
+  --espacio: 16px;
+  --color-acento: gold;
+  --radio: 10px;
 }
 
 * {
@@ -60,7 +62,7 @@ body {
 }
 
 .catalogo {
-  --radio: 10px;
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -70,10 +72,11 @@ body {
 
 .tarjeta {
   width: 240px;
+  
   background-color: #ffffff;
   border: 1px solid #dbe5d8;
   border-radius: var(--radio);
-  padding: var(--espacio);
+  padding: 20px;
 }
 
 .tarjeta h2 {
@@ -81,7 +84,7 @@ body {
 }
 
 .detalle {
-  color: var(--texto-suave);
+  color: var(--color-texto-suave);
   font-size: 0.9rem;
 }
 
@@ -91,7 +94,7 @@ body {
 }
 
 .destacada {
-  border: 2px solid var(--color-acento);
+  border: 3px solid var(--color-acento);
 }
 
 .pie {
@@ -100,6 +103,6 @@ body {
   background-color: var(--color-primario);
   color: #ffffff;
   text-align: center;
-  border-radius: var(--radio);
+  border-radius: 8px;
   padding: var(--espacio);
 }
