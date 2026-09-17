@@ -42,7 +42,7 @@ body {
 }
 
 .titulo {
-  font-size: clamp(3rem, 4vw, 1.75rem);
+  font-size: clamp(1.75rem, 4vw, 3rem);
 }
 
 .bajada {
@@ -63,13 +63,13 @@ body {
 }
 
 .video {
-  width: calc(33.333%-14px);
+  width: calc(33.333% - 14px);
   min-width: 240px;
   margin: 0;
 }
 
 .pantalla {
-  aspect-ratio: 16:9;
+  aspect-ratio: 16 / 9;
   border-radius: 10px;
   margin-bottom: 8px;
 }
@@ -112,8 +112,10 @@ figcaption {
   font-size: 0.7rem;
   padding: 2px 8px;
   border-radius: 4px;
+  position: flex;
+  
 }
 
-.plan:has(.precio) {
+.plan:has(.etiqueta) {
   border: 2px solid #c0392b;
 }
